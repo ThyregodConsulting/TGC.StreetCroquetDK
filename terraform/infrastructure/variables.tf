@@ -1,3 +1,9 @@
+variable "organization_id" {
+  description = "Unused. Declared only because the shared deploy workflow always passes -var=organization_id."
+  type        = string
+  default     = null
+}
+
 variable "environment" {
   description = "The environment for the landing zone"
   type        = string
