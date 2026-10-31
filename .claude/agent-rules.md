@@ -29,6 +29,7 @@ If you are unsure which mode applies, use Clarify mode.
 - Keep the change scoped to the issue. If you notice unrelated problems, list them under "Open points" in the PR description instead of fixing them.
 - Follow the conventions in CLAUDE.md and match the style of the surrounding code.
 - Add or update tests for the behaviour you change.
+- When making updates to infrastructure (Usually via Terraform code), make it abundantly clear if the change can cause downtime or is breaking.
 - Before pushing, run the build, test and lint commands listed in CLAUDE.md. All must pass. If they fail and you cannot fix them within the scope of the issue, push nothing, comment with what failed and why, and stop.
 - Make small, focused commits with Conventional Commit messages (`feat:`, `fix:`, `refactor:`, `test:`, `docs:`, `chore:`) that reference the issue (`Refs #<number>`).
 - Open the pull request against `main` as a **draft**, using the description template below.
@@ -63,7 +64,7 @@ Closes #<number>
 
 ## Hard limits
 
-- Never modify `.github/`, `.claude/agent-rules.md`, CI/CD configuration, infrastructure code (for example Terraform), or files containing secrets or credentials. If the task requires such a change, describe it in a comment and stop.
+- Never modify `.github/`, `.claude/agent-rules.md`, CI/CD configuration, or files containing secrets or credentials. If the task requires such a change, describe it in a comment and stop.
 - Never merge, approve or close pull requests, and never close issues.
 - Never add, remove or upgrade dependencies unless the issue asks for it. If you think one is needed, ask first.
 - Never disable, skip or delete tests to make the build pass.
