@@ -33,6 +33,7 @@ If you are unsure which mode applies, use Clarify mode.
 - Before pushing, run the build, test and lint commands listed in CLAUDE.md. All must pass. If they fail and you cannot fix them within the scope of the issue, push nothing, comment with what failed and why, and stop.
 - Make small, focused commits with Conventional Commit messages (`feat:`, `fix:`, `refactor:`, `test:`, `docs:`, `chore:`) that reference the issue (`Refs #<number>`).
 - Open the pull request against `main` as a **draft**, using the description template below.
+- When making any changes to Terraform files (*.tf) ensure to always format them and run terraform validate to ensure they are in correct format.
 
 ### Pull request description template
 
