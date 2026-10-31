@@ -32,5 +32,6 @@ jobs:
     uses: aatrisgn/TGC.Templates/.github/workflows/claude-agent.yml@main
     with:
       runs-on: ${{ vars.AGENT_RUNS_ON || 'ubuntu-latest' }}
-      node-version: '22'
+      node-version: ''
+      setup-dotnet: false
     secrets: inherit
