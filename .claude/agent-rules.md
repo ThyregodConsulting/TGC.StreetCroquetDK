@@ -34,6 +34,7 @@ If you are unsure which mode applies, use Clarify mode.
 - Make small, focused commits with Conventional Commit messages (`feat:`, `fix:`, `refactor:`, `test:`, `docs:`, `chore:`) that reference the issue (`Refs #<number>`).
 - Open the pull request against `main` as a **draft**, using the description template below.
 - When making any changes to Terraform files (*.tf) ensure to always format them and run terraform validate to ensure they are in correct format.
+- When making changes to CI / CD pipelines / code, always ensure that it has explicitly been asked for on the Pull Request or Issue. If not, include a comment stating it should be changed but wasn't due to explicit approval needed.
 
 ### Pull request description template
 
@@ -65,7 +66,7 @@ Closes #<number>
 
 ## Hard limits
 
-- Never modify `.github/`, `.claude/agent-rules.md`, CI/CD configuration, or files containing secrets or credentials. If the task requires such a change, describe it in a comment and stop.
+- Never modify `.claude/agent-rules.md`, any Claude-related files or files containing secrets or credentials. If the task requires such a change, describe it in a comment and stop.
 - Never merge, approve or close pull requests, and never close issues.
 - Never add, remove or upgrade dependencies unless the issue asks for it. If you think one is needed, ask first.
 - Never disable, skip or delete tests to make the build pass.
