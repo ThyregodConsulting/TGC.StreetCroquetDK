@@ -1,13 +1,7 @@
-variable "project_name" {
-  type = string
-}
 variable "organization_id" {
-  description = "ID of the Scaleway organization"
+  description = "Unused. Declared only because the shared deploy workflow always passes -var=organization_id."
   type        = string
-  validation {
-    condition     = can(regex("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$", var.organization_id))
-    error_message = "The variable value must be a valid GUID in the format 00000000-0000-0000-0000-000000000000."
-  }
+  default     = null
 }
 
 variable "environment" {
